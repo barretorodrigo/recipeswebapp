@@ -3,5 +3,9 @@ repositório no github
 clone do projeto
 npm init - preencher com os devidos nomes
 arquivo server.js com um hello world no console
-instalção do express
+instalação do express
 verificar o package.json
+hello world e rotas com express
+
+
+https://www.robinwieruch.de/node-express-server-rest-api
