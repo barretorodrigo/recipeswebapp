@@ -1,16 +1,16 @@
 const express = require('express')
 const app = express()
 
-let users={
-    1:{
+let users=[
+    {
         id: '1',
         username: 'barreto'
     },
-    2:{
+    {
         id: '2',
         username: 'rodrigo'
     }
-}
+]
 
 app.listen(3000, function(){
     console.log('Hello World')
@@ -19,4 +19,12 @@ app.listen(3000, function(){
 app.get('/', (req, res)=>{
     //res.send('Hello World!')
     return res.send(Object.values(users))
+})
+
+app.get('/:id', (req, res)=>{
+    //res.send('Hello World!')
+    return res.send(users.filter(function(user){
+        if(user.id === req.params.id)
+            return true
+    }))
 })
